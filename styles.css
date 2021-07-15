@@ -1,3 +1,5 @@
+/* Global */
+
 *{
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -17,6 +19,8 @@ body, ul, li, h1, h2, a{
 body{
   background-color: aliceblue;
 }
+
+/* Header */
 
 header{
   position: fixed;
@@ -44,7 +48,9 @@ header h1 a{
   text-decoration: none;
   color: whitesmoke
 }
-  
+
+/* Banner */
+
 .banner{
   position: relative;
 }
@@ -73,6 +79,32 @@ header h1 a{
 .banner span{
   font-size: 1.3em;
 }
+
+@media screen and (max-width: 850px){
+  .banner img{
+    max-width: 100%;
+    height: 500px;
+    width: 100000px;
+  }
+    
+  .banner h2{
+    font-size: 30px;
+  } 
+}
+
+@media screen and (max-width: 700px){
+  .banner img{
+    max-width: 100%;
+    height: 300px;
+    width: 100000px;
+  }
+
+  .banner h2{
+    font-size: 15px;
+  } 
+}
+
+/* Navigation */
   
 nav{
   background-color: whitesmoke;
@@ -111,6 +143,20 @@ nav li a.join{
   color: #1357b1;
 }
 
+nav li a:hover{
+  text-decoration: underline;
+  background-color: gainsboro;
+  padding: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  nav li{
+    display: block;
+  }
+}
+
+/* Main Section */
+
 section.main{
   max-width: 100%;
   width: 1200px;
@@ -131,6 +177,13 @@ article p{
   text-indent: 35px;
 }
   
+article p::first-letter{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Images Gallery */
+  
 .images{
   text-align: center;
   margin: 15px 0px;
@@ -139,7 +192,6 @@ article p{
   
 .images li{
   display: inline-block;
-  margin: 20px 2%;
   width: 45%;
 }
   
@@ -154,6 +206,77 @@ article p{
   color: gray;
   background-color: gainsboro;
 }
+
+.images li:hover{
+  position: relative;
+  bottom: 4px;
+  left: 4px;
+}
+
+@media screen and (max-width: 1000px) {
+  .images li{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .images li{
+    display: block;
+    margin: 0 auto;
+    width: 70%
+  }
+  .images li img{
+    height: 250px;
+  }
+
+}
+
+@media screen and (max-width: 690px) {
+  .images li{
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .images li{
+    width: 400px;
+  }
+  .images li img{
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .images li{
+    width: 300px;
+  }
+  .images li img{
+    height: 150px;
+  }
+  .images figcaption{
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .images li{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .images li{
+    width: 250px;
+  }
+  .images li img{
+    height: 120px;
+  }
+  .images figcaption{
+    font-size: 0.5em;
+  }
+}
+
+/* Join Section */
   
 section.join{
   background-color: #F4F4F4;
@@ -172,10 +295,11 @@ form input.email{
   padding: 10px 20px;
   font-size: 24px;
   border-radius: 30px;
+  text-align: center;
   border: 4px solid black;
 }
-  
-form input.submit{
+ 
+form button.submit{
   font-size: 20px;
   margin: 20px 0;
   padding: 10px 20px;
@@ -183,26 +307,7 @@ form input.submit{
   background-color: white;
   border: 4px solid black;
 }
-  
-footer{
-  background-color: #1357b1;
-  color:whitesmoke;
-  padding: 1px;
-  text-align: center;
-}
-  
-nav li a:hover{
-  text-decoration: underline;
-  background-color: gainsboro;
-  padding: 3px;
-}
-  
-.images li:hover{
-  position: relative;
-  bottom: 4px;
-  left: 4px;
-}
-  
+
 form input.email:focus{
   border: 4px dashed #4b4b4b;
   outline: none;
@@ -211,16 +316,35 @@ form input.email:focus{
 form input.email:valid{
   border: 4px solid #71d300;
 }
-  
-article p::first-letter{
-  font-size: 1.5em;
-  font-weight: bold;
-}
-  
+
 section.join p::first-letter{
   font-size: 1.5em;
   font-weight: bold;
 }
+
+@media screen and (max-width: 380px) {
+  form input.email{
+    margin: 0 auto;
+    padding: 2px 5px;
+    font-size: 16px;
+  }
+  form button.submit{
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* Footer */
+  
+footer{
+  background-color: #1357b1;
+  color:whitesmoke;
+  padding: 1px;
+  text-align: center;
+}
+
+/* Volumes Table */
 
 table.vols{
   width: 100%;
@@ -258,4 +382,20 @@ table.vols tr:nth-child(odd){
 
 table.vols tr:hover{
   background-color: #ddd;
+}
+
+@media screen and (max-width:380px) {
+  table.vols, table.vols th, table.vols td{
+    font-size: 0.9em
+  }
+  table.vols th{
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width:300px) {
+  table.vols td img{
+    width: 60px;
+    height: 94.2px;
+  }
 }
