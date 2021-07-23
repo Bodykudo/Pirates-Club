@@ -58,6 +58,7 @@ label[for="female"] {
   cursor: pointer;
   background: url("../img/checks.png") no-repeat;
   background-position: 0 -32px;
+  transition: all 0.5s ease;
 }
 
 input:checked + label[for="male"],
