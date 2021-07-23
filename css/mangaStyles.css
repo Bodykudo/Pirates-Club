@@ -1,3 +1,23 @@
+/* Page */
+
+section.mangaSection {
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+@media screen and (max-width: 550px) {
+  section.mangaSection {
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+    margin: 10px;  
+  }
+}
+
+/* Table */
+
 table.vols {
   width: 100%;
 }
