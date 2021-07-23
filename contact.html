@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/contactStyles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pirates Club - Contact Us</title>
   </head>
@@ -72,10 +71,16 @@
           <legend>Personal Info</legend>
           <div>
             <p>You are a ...</p>
-            <input type="radio" name="gender" id="male" required />
+            <input type="radio" name="gender" id="male" value="male" required />
             <label for="male">Male</label>
             <br />
-            <input type="radio" name="gender" id="female" required />
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              value="female"
+              required
+            />
             <label for="female">Female</label>
           </div>
           <br />
@@ -396,15 +401,15 @@
           <span class="tick"></span>
           <input
             type="tel"
-            name="tele"
-            id="tele"
+            name="phone"
+            id="phone"
             placeholder="Phone Number"
             autocomplete="off"
             pattern="^01[0-2,5]{1}[0-9]{8}$"
             required
           />
           <span class="tick"></span>
-          <textarea name="" id="" rows="20"></textarea>
+          <textarea name="text" id="text" rows="20"></textarea>
         </fieldset>
         <input type="submit" value="Contact us" />
         <input type="Reset" value="Reset" />
