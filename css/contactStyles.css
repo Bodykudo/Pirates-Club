@@ -56,7 +56,7 @@ label[for="female"] {
   display: inline-block;
   padding-left: 26px;
   cursor: pointer;
-  background: url("/img/checks.png") no-repeat;
+  background: url("../img/checks.png") no-repeat;
   background-position: 0 -32px;
 }
 
@@ -80,7 +80,7 @@ select {
   appearance: none;
   margin: 10px 0;
   padding: 10px 50px 10px 10px;
-  background: url("/img/select.png") no-repeat;
+  background: url("../img/select.png") no-repeat;
   background-position: 99% center;
   border-radius: 15px;
   border: 4px solid black;
@@ -97,7 +97,7 @@ input[type="tel"] {
   padding: 10px 10px 10px 50px;
   margin-bottom: 20px;
   border-radius: 15px;
-  background: url(/img/inputs.png) no-repeat;
+  background: url("../img/inputs.png") no-repeat;
   background-color: white;
   border: 4px solid black;
   transition: all 0.5s ease;
@@ -118,7 +118,7 @@ input[type="tel"]:valid {
 
 input[type="email"]:valid + .tick,
 input[type="tel"]:valid + .tick {
-  background: url(/img/tick.png) no-repeat;
+  background: url("../img/tick.png") no-repeat;
   background-size: 100%;
   display: block;
   width: 20px;
