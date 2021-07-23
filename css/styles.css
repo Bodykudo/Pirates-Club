@@ -120,7 +120,7 @@ header a {
 
 nav {
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 5px;
   margin: 0px;
   position: sticky;
   top: 80px;
@@ -135,6 +135,7 @@ nav ul {
 }
 
 nav li {
+  display: block;
   font-size: 25px;
   margin: 10px;
   color: gray;
@@ -142,8 +143,10 @@ nav li {
 }
 
 nav li a {
+  display: block;
   text-decoration: none;
   color: gray;
+  transition: 0.3s;
 }
 
 nav li a.current {
@@ -221,12 +224,11 @@ section.main {
 
 .image {
   max-width: 46%;
-  transition-duration: 3s;
+  transition: 0.3s;
 }
 
 .image img {
   width: 100%;
-  transition-duration: 3s;
 }
 
 .images figcaption {
@@ -237,9 +239,7 @@ section.main {
 }
 
 .image:hover {
-  position: relative;
-  bottom: 4px;
-  left: 4px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 800px) {
