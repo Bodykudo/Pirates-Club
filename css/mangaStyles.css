@@ -1,0 +1,57 @@
+table.vols {
+  width: 100%;
+}
+
+table.vols,
+table.vols th,
+table.vols td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+table.vols th {
+  background-color: var(--mainColor);
+  color: white;
+  font-size: 1.3em;
+  text-shadow: 2px 2px 4px black;
+}
+
+table.vols td img {
+  width: 90px;
+  height: 142px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table.vols tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.vols tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+table.vols tr:hover {
+  background-color: #ddd;
+}
+
+@media screen and (max-width: 380px) {
+  table.vols,
+  table.vols th,
+  table.vols td {
+    font-size: 0.9em;
+  }
+  table.vols th {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  table.vols td img {
+    width: 60px;
+    height: 94.2px;
+  }
+}

@@ -1,0 +1,324 @@
+/* Global */
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  --mainColor: #1357b1;
+}
+
+*::selection {
+  background-color: var(--mainColor);
+  color: white;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  outline: 0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+
+header a {
+  font-size: 32px;
+  text-decoration: none;
+  color: whitesmoke;
+  border: 8px solid white;
+  padding: 6px 12px;
+  margin: -11.25px;
+  display: inline-block;
+  border-radius: 36px;
+  text-shadow: 3px 3px 6px black;
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    position: relative;
+    height: 60px;
+  }
+  header a {
+    font-size: 24px;
+    margin: -16.25px;
+  }
+}
+
+/* Banner */
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner .welcome {
+  background-color: gray;
+  color: whitesmoke;
+  position: absolute;
+  padding: 5%;
+  top: 35%;
+}
+
+.banner h1 {
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+  font-variant: small-caps;
+}
+
+.banner span {
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 700px) {
+  .banner h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner .welcome {
+    position: relative;
+    top: -5px;
+  }
+  .banner h1 {
+    font-size: 25px;
+  }
+}
+
+/* Navigation */
+
+nav {
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 0px;
+  position: sticky;
+  top: 80px;
+  z-index: 1;
+}
+
+nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li {
+  font-size: 25px;
+  margin: 10px;
+  color: gray;
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: gray;
+}
+
+nav li a.current {
+  text-decoration: underline;
+  background-color: gainsboro;
+  padding: 3px;
+}
+
+nav li a.join {
+  color: var(--mainColor);
+}
+
+nav li a:hover {
+  text-decoration: underline;
+  background-color: gainsboro;
+  padding: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  nav li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav {
+    top: 0;
+  }
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Main Section */
+
+section.main {
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+.main article h1 {
+  color: var(--mainColor);
+  font-size: 32px;
+  text-shadow: 1.5px 1.5px black;
+}
+
+.main article p {
+  line-height: 2em;
+  color: gray;
+  text-indent: 35px;
+  margin: 10px 0 35px 0;
+}
+
+.main article p::first-letter {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* Images Gallery */
+
+.images {
+  text-align: center;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.image {
+  max-width: 46%;
+  transition-duration: 3s;
+}
+
+.image img {
+  width: 100%;
+  transition-duration: 3s;
+}
+
+.images figcaption {
+  font-style: italic;
+  font-size: 1em;
+  color: gray;
+  background-color: gainsboro;
+}
+
+.image:hover {
+  position: relative;
+  bottom: 4px;
+  left: 4px;
+}
+
+@media screen and (max-width: 800px) {
+  .images {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .image {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* Join Section */
+
+section.join {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4b4b4b;
+}
+
+section.join h2 {
+  font-size: 30px;
+  text-shadow: 1.5px 1.5px gray;
+}
+
+section.join form input.email {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 30px;
+  text-align: center;
+  border: 4px solid black;
+}
+
+section.join form button.submit {
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: white;
+  border: 4px solid black;
+}
+
+section.join form input.email:focus {
+  border: 4px dashed #4b4b4b;
+  outline: none;
+}
+
+section.join form input.email:valid {
+  border: 4px solid #71d300;
+}
+
+section.join p::first-letter {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 380px) {
+  form input.email {
+    margin: 0 auto;
+    padding: 2px 5px;
+    font-size: 16px;
+  }
+  form button.submit {
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--mainColor);
+  color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+}

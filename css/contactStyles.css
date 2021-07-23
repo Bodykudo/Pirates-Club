@@ -1,0 +1,172 @@
+/* Global Form */
+
+section.form {
+  background-color: #f4f4f4;
+  padding: 60px 15%;
+  color: #4b4b4b;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 640px) {
+  section.form {
+    padding: 60px 1%;
+  }
+}
+
+fieldset {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 4px solid;
+}
+
+legend {
+  text-align: center;
+  border-radius: 30px;
+  padding: 10px;
+  border: 4px solid black;
+  color: var(--mainColor);
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+input {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  background-color: white;
+}
+
+/* Radio Buttons */
+
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  margin: 0;
+  background: url("img/checks.png") no-repeat;
+  background-position: 0 0;
+}
+
+label[for="male"],
+label[for="female"] {
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-left: 26px;
+  cursor: pointer;
+  background: url("/img/checks.png") no-repeat;
+  background-position: 0 -32px;
+}
+
+input:checked + label[for="male"],
+input:checked + label[for="female"] {
+  background-position: 0 0;
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+/* Selecet Box */
+
+select,
+option {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  margin: 10px 0;
+  padding: 10px 50px 10px 10px;
+  background: url("/img/select.png") no-repeat;
+  background-position: 99% center;
+  border-radius: 15px;
+  border: 4px solid black;
+  outline: none;
+  background-color: white;
+}
+
+/* Email and tel */
+
+input[type="email"],
+input[type="tel"] {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 50px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: url(/img/inputs.png) no-repeat;
+  background-color: white;
+  border: 4px solid black;
+  transition: all 0.5s ease;
+}
+
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border: 4px dashed #4b4b4b;
+  outline: none;
+}
+
+input[type="email"]:valid,
+input[type="tel"]:valid {
+  border: 4px solid #71d300;
+  margin: 0;
+}
+
+input[type="email"]:valid + .tick,
+input[type="tel"]:valid + .tick {
+  background: url(/img/tick.png) no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 10px;
+}
+
+input[type="email"] {
+  background-position: 7px 8px;
+}
+
+input[type="tel"] {
+  background-position: 7px -58px;
+}
+
+/* Textarea */
+
+textarea {
+  width: 100%;
+  resize: none;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  border-radius: 15px;
+  border: 4px solid black;
+  padding: 15px;
+}
+
+@media screen and (max-width: 450px) {
+  textarea {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  textarea {
+    height: 200px;
+  }
+}
+
+/* Button */
+
+input[type="submit"],
+input[type="reset"] {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px 5%;
+  border-radius: 30px;
+  background-color: white;
+  border: 4px solid black;
+}
