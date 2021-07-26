@@ -574,8 +574,9 @@ section.form {
   background-color: white;
 }
 
-/* Email and tel */
+/* Name, Email and Tel */
 
+.form input[type="text"],
 .form input[type="email"],
 .form input[type="tel"] {
   display: block;
@@ -590,27 +591,40 @@ section.form {
   outline: none;
 }
 
+.form input[type="text"] {
+  background: url("img/name.png") no-repeat;
+  background-size: 4%;
+  background-color: white;
+}
+
+.form input[type="text"]:focus,
 .form input[type="email"]:focus,
 .form input[type="tel"]:focus,
 .form textarea:focus {
   border: 4px dashed #4b4b4b;
 }
 
+.form input[type="text"]:valid,
 .form input[type="email"]:valid,
 .form input[type="tel"]:valid {
   border: 4px solid #71d300;
   margin: 0;
 }
 
+.form input[type="text"]:valid {
+  margin-bottom: 20px;
+}
+
+/* .form input[type="text"]:valid + .tick, */
 .form input[type="email"]:valid + .tick,
 .form input[type="tel"]:valid + .tick {
   background: url("img/tick.png") no-repeat;
   background-size: 100%;
-  display: block;
+  display: inline;
   width: 20px;
   height: 20px;
   float: right;
-  margin: 10px;
+  margin: 20px;
 }
 
 .form input[type="email"] {
