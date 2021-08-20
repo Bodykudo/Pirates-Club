@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="img/Icon.png">
+    <link rel="icon" href="img/Icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pirates Club - Contact Us</title>
   </head>
@@ -67,35 +67,28 @@
     </main>
 
     <section class="form">
-      <form action="">
+      <form>
         <fieldset>
           <legend>Personal Info</legend>
           <div>
             <input
               type="text"
-              name="name"
               id="name"
               placeholder="Your Name"
               autocomplete="off"
               required
             />
             <p>You are a ...</p>
-            <input type="radio" name="gender" id="male" value="male" required />
+            <input type="radio" id="male" value="male" required />
             <label for="male">Male</label>
             <br />
-            <input
-              type="radio"
-              name="gender"
-              id="female"
-              value="female"
-              required
-            />
+            <input type="radio" id="female" value="female" required />
             <label for="female">Female</label>
           </div>
           <br />
           <div>
             <label for="country">Country</label><br />
-            <select id="country" name="country" required>
+            <select id="country" required>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Åland Islands">Åland Islands</option>
               <option value="Albania">Albania</option>
@@ -401,7 +394,6 @@
           <legend>Contact Info</legend>
           <input
             type="email"
-            name="email"
             id="email"
             placeholder="Email"
             autocomplete="off"
@@ -410,7 +402,6 @@
           <span class="tick"></span>
           <input
             type="tel"
-            name="phone"
             id="phone"
             placeholder="Phone Number"
             autocomplete="off"
@@ -419,7 +410,6 @@
           />
           <span class="tick"></span>
           <textarea
-            name="text"
             id="text"
             rows="20"
             placeholder="New Message"
