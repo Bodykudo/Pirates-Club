@@ -463,6 +463,12 @@ table.vols,
   display: block;
   margin-right: auto;
   margin-left: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vols td img:hover {
+  opacity: 0.7;
 }
 
 .vols tr:nth-child(even) {
@@ -477,6 +483,78 @@ table.vols,
   background-color: #ddd;
 }
 
+/* Modal Images */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: zoom 0.5s ease-in-out;
+  z-index: 3;
+}
+
+.modal-content {
+  width: 25em;
+}
+
+.modal-caption {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #bbb;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes zoom {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .modal-content {
+    width: 155%;
+  }
+}
+
 @media screen and (max-width: 380px) {
   table.vols,
   .vols th,
@@ -485,6 +563,10 @@ table.vols,
   }
   .vols th {
     font-size: 1.1em;
+  }
+
+  .modal-content {
+    width: 180%;
   }
 }
 
