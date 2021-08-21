@@ -505,7 +505,7 @@ table.vols,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: zoom 0.5s ease-in-out;
+  animation: zoom 0.3s ease-in-out;
   z-index: 3;
 }
 
@@ -513,27 +513,43 @@ table.vols,
   width: 25em;
 }
 
+.modal-buttons {
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  color: #aaaaaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .modal-caption {
-  margin: auto;
+  margin-left: 5px;
   width: 80%;
   text-align: center;
-  color: #ccc;
   padding: 10px 0;
 }
 
 .modal-close {
-  position: absolute;
-  top: 0px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 50px;
-  font-weight: bold;
+  color: red;
+  font-size: 30px;
   transition: 0.3s;
   cursor: pointer;
 }
 
+.modal-next,
+.modal-prev {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-next:hover,
+.modal-prev:hover {
+  color: #333;
+}
+
 .modal-close:hover {
-  color: #bbb;
+  color: #333;
 }
 
 .hidden {
@@ -544,13 +560,15 @@ table.vols,
   from {
     transform: translate(-50%, -50%) scale(0);
   }
+
   to {
     transform: translate(-50%, -50%) scale(1);
   }
 }
 
 @media screen and (max-width: 560px) {
-  .modal-content {
+  .modal-content,
+  .modal-buttons {
     width: 155%;
   }
 }
@@ -561,11 +579,13 @@ table.vols,
   .vols td {
     font-size: 0.9em;
   }
+
   .vols th {
     font-size: 1.1em;
   }
 
-  .modal-content {
+  .modal-content,
+  .modal-buttons {
     width: 180%;
   }
 }
