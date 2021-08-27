@@ -244,6 +244,7 @@ section.main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 70px;
 }
 
 .image {
@@ -253,11 +254,6 @@ section.main {
 
 .image img {
   width: 100%;
-}
-
-.image iframe {
-  width: 100%;
-  /* height: 100%; */
 }
 
 .images figcaption {
@@ -365,6 +361,7 @@ section.newsSec {
 .newsSec article {
   background-color: white;
   padding: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .newsSec article h2 {
@@ -404,9 +401,9 @@ section.newsSec {
   }
 
   section.newsSec {
-    max-width: 100%;
+    max-width: 95%;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
   }
   .newsSec article {
     margin: 0 auto;
