@@ -100,12 +100,17 @@ header a {
   position: absolute;
   padding: 5%;
   top: 35%;
+  background: url(img/welcome-bg.png) no-repeat center center/cover;
+  background-size: 200%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 .banner h1 {
-  font-size: 32px;
+  color: whitesmoke;
+  font-size: 40px;
   text-align: center;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 5px 5px 20px black;
+  -webkit-text-stroke: 2px black;
   font-variant: small-caps;
 }
 
@@ -123,9 +128,10 @@ header a {
   .banner .welcome {
     position: relative;
     top: -5px;
+    background-size: 120%;
   }
   .banner h1 {
-    font-size: 25px;
+    font-size: 40px;
   }
 }
 
